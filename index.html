@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Idea Tree | ゲームアイディア整理</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">✳</div>
+        <div>
+          <h1>Idea Tree</h1>
+          <p>ゲームアイディアを、枝分かれさせよう。</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span id="save-status" class="save-status" role="status">保存済み</span>
+        <button id="add-root-button" class="button button-primary" type="button">＋ メインアイディア</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <h2>アイディアツリー</h2>
+          <p>「＋ 子要素」で、選んだ項目の下にアイディアを追加できます。</p>
+        </div>
+        <div class="intro-note">💡 変更はこのブラウザに自動保存されます</div>
+      </section>
+
+      <section id="empty-state" class="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">🌱</div>
+        <h3>最初のアイディアを作ろう</h3>
+        <p>「メインアイディア」から、考えたいテーマを追加してください。</p>
+        <button id="empty-add-button" class="button button-primary" type="button">＋ 最初のアイディアを作る</button>
+      </section>
+
+      <section id="tree-list" class="tree-list" aria-label="アイディアツリー"></section>
+    </main>
+
+    <footer class="footer">
+      <span>Idea Tree · Personal idea organizer</span>
+      <button id="export-button" class="button button-quiet" type="button">JSONを書き出す</button>
+      <button id="import-button" class="button button-quiet" type="button">JSONを読み込む</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+    </footer>
+  </div>
+  <noscript>このサイトを使うにはJavaScriptを有効にしてください。</noscript>
+</body>
+</html>
